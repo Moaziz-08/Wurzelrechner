@@ -13,7 +13,7 @@ body {
     color: #333;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 320px;
     max-width: 90%;
     text-align: center;
     padding: 20px;
@@ -24,7 +24,7 @@ body {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 15px;
     font-size: 1.5em;
     color: #333;
@@ -34,21 +34,61 @@ input[type="text"] {
     outline: none;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
+    text-align: right;
 }
 
 input[type="text"]:focus {
     border-color: #4CAF50;
 }
 
-.actions {
-    display: flex;
-    justify-content: center;
+.result {
+    width: calc(100% - 20px);
+    padding: 15px;
+    font-size: 1.5em;
+    color: #333;
+    background: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: right;
+    margin-top: 10px;
+}
+
+#partialRootButton {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #9C27B0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+#partialRootButton:hover {
+    background-color: #8E24AA;
+}
+
+#partialRootButton:active {
+    background-color: #7B1FA2;
+    transform: scale(0.98);
+}
+
+.hidden {
+    display: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 button {
-    padding: 15px 20px;
+    padding: 15px;
     font-size: 1.2em;
     color: #fff;
     background-color: #4CAF50;
@@ -79,8 +119,26 @@ button:active {
     background-color: #c62828;
 }
 
-.result {
-    font-size: 1.2em;
-    color: #333;
-    margin-top: 20px;
+#calculateSquareRoot {
+    background-color: #2196F3;
+}
+
+#calculateSquareRoot:hover {
+    background-color: #1976D2;
+}
+
+#calculateSquareRoot:active {
+    background-color: #1565C0;
+}
+
+#calculateSquare {
+    background-color: #FFC107;
+}
+
+#calculateSquare:hover {
+    background-color: #FFA000;
+}
+
+#calculateSquare:active {
+    background-color: #FF6F00;
 }
