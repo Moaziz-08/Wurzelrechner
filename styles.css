@@ -142,3 +142,12 @@ button:active {
 #calculateSquare:active {
     background-color: #FF6F00;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
