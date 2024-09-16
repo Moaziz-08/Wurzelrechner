@@ -111,18 +111,7 @@ function decomposeSqrt(number) {
     return { integerPart, fractionalPart };
 }
 
-// Funktion zur Umwandlung der gemischten Form in Dezimal
-function convertToDecimal() {
-    const resultField = document.getElementById("result").innerText;
-    const match = resultField.match(/(\d*)√(\d+)/);
 
-    if (match) {
-        const integerPart = parseFloat(match[1]) || 0;
-        const fractionalPart = parseFloat(match[2]);
-        const decimalResult = integerPart * Math.sqrt(fractionalPart);
-        document.getElementById("result").innerText = `Ergebnis: ${decimalResult.toFixed(2)}`;
-    }
-}
 
 // Event-Listener für den "√"-Button
 document.getElementById("calculateSquareRoot").addEventListener("click", calculateSquareRoot);
