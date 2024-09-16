@@ -94,25 +94,6 @@ function calculatePartialRoot() {
     resultField.innerText = `Teilweise Wurzel (√${root}): ${result.toFixed(2)}`;
 }
 
-// Funktion zum Decomposieren der Wurzel in eine gemischte Form
-function decomposeSqrt(number) {
-    let integerPart = Math.floor(Math.sqrt(number));
-    let fractionalPart = number / (integerPart * integerPart);
-    
-    // Suche nach dem größtmöglichen Wert, der ein Quadrat ist
-    for (let i = Math.floor(integerPart); i > 1; i--) {
-        if (Number.isInteger(number / (i * i))) {
-            integerPart = i;
-            fractionalPart = number / (i * i);
-            break;
-        }
-    }
-
-    return { integerPart, fractionalPart };
-}
-
-
-
 // Event-Listener für den "√"-Button
 document.getElementById("calculateSquareRoot").addEventListener("click", calculateSquareRoot);
 
